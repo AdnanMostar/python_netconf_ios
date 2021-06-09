@@ -2,7 +2,7 @@ from ncclient import manager
 import xml.dom.minidom
 
 # IOS XE Settings
-ios_xe_host = "192.168.255.250"
+ios_xe_host = "192.168.255.127"
 ios_xe_port = 830
 ios_xe_username = "cisco"
 ios_xe_password = "cisco"

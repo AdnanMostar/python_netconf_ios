@@ -18,9 +18,10 @@ m = manager.connect(
 
 netconf_filter = """
 <filter>
-  <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-    <interface></interface>
-  </interfaces>
+  <native
+      xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+      <username></username>
+  </native>
 </filter>"""
 
 netconf_reply = m.get_config("running", filter=netconf_filter)
@@ -28,3 +29,4 @@ netconf_reply = m.get_config("running", filter=netconf_filter)
 print(xml.dom.minidom.parseString(netconf_reply.xml).toprettyxml())
 
 m.close_session()
+
